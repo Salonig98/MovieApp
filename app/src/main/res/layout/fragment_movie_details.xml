@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="result"
+            type="com.example.movieapp.model.Result" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="ui.MovieDetailsFragment">
+
+        <androidx.appcompat.widget.Toolbar
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimaryDark" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/movie_poster"
+                android:layout_width="wrap_content"
+                android:layout_height="400dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="148dp"
+                android:layout_marginEnd="209dp"
+                android:layout_marginBottom="282dp"
+                android:src="@{result.poster_path}" />
+
+            <TextView
+                android:id="@+id/tv_movie_release_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="250dp"
+                android:layout_marginBottom="550dp"
+                android:text="Release Date"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_movie_release_date_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="250dp"
+                android:layout_marginBottom="533dp"
+                android:text="22-07-90"
+                android:textColor="@color/grey"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tv_movie_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="250dp"
+                android:layout_marginBottom="455dp"
+                android:text="Rating"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_movie_rating_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="250dp"
+                android:layout_marginBottom="440dp"
+                android:text="8.5"
+                android:textColor="@color/grey"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tv_movie_popularity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="250dp"
+                android:layout_marginBottom="375dp"
+                android:text="Popularity"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_movie_popularity_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="250dp"
+                android:layout_marginBottom="360dp"
+                android:text="234637.09"
+                android:textColor="@color/grey"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_overview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginBottom="270dp"
+                android:text="Overview"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_overview_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="160dp"
+                android:text="This is the description"
+                android:textColor="@color/grey"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>
