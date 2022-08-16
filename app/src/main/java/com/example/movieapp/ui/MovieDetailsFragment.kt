@@ -1,6 +1,5 @@
 package com.example.movieapp.ui
 
-import android.R
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -22,7 +21,7 @@ class MovieDetailsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
         binding = FragmentMovieDetailsBinding.inflate(inflater, container, false)
         setUpToolbar()
         setDataInUi()
@@ -31,24 +30,23 @@ class MovieDetailsFragment : Fragment() {
 
     private fun setUpToolbar() {
         val toolbar: Toolbar = binding.toolbar
-        toolbar.navigationIcon = resources.getDrawable(R.drawable.arrow_up_float)
         toolbar.title = args.movie.title
-        toolbar.setNavigationOnClickListener(View.OnClickListener {
+        toolbar.setNavigationOnClickListener {
             val action =
                 MovieDetailsFragmentDirections.actionMovieDetailsFragmentToMovieListFragment()
             findNavController().navigate(action)
-        })
+        }
     }
 
     private fun setDataInUi() {
-        binding.tvMoviePopularityValue.text = args.movie.popularity.toString()
-        binding.tvMovieRatingValue.text = args.movie.rating.toString()
+        binding.tvPopularityValue.text = args.movie.popularity.toString()
+        binding.tvRatingValue.text = args.movie.rating.toString()
         binding.tvOverviewValue.text = args.movie.overview
-        binding.tvMovieReleaseDateValue.text =
+        binding.tvReleaseDateValue.text =
             DateUtils.stringToDateConversion(args.movie.release_date)
         Glide.with(this)
             .load(com.example.movieapp.adapter.IMAGE_BACKDROP_PATH + args.movie.poster_path)
-            .into(binding.moviePoster);
+            .into(binding.moviePoster)
     }
 
 }

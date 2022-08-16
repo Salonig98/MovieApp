@@ -8,7 +8,6 @@ class DateUtils {
 
     companion object {
         fun stringToDateConversion(date: String): String {
-
             val dtStart = date
             val format = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'")
             try {

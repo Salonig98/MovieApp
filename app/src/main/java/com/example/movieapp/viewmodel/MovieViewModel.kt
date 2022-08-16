@@ -8,7 +8,6 @@ import com.example.movieapp.repository.MovieRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-
 class MovieViewModel(private val repository: MovieRepository) : ViewModel() {
 
     init {

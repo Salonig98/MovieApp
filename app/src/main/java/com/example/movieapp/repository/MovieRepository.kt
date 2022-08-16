@@ -29,13 +29,10 @@ class MovieRepository(
             }
         } else {
             val movies = movieDatabase.movieDao().getPopularMovies()
-            val movieList = MovieList(movies, 1, 1)
+            val movieList = MovieList(movies)
             moviesLiveData.postValue(movieList)
         }
-
-
     }
-
 }
 
 
